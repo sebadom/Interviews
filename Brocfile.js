@@ -2,7 +2,14 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp();
+var app = new EmberApp({
+  'ember-cli-foundation-sass': {
+    'modernizr': false,
+    'fastclick': true,
+    'foundationJs': 'all'
+  }
+});
+app.import('vendor/foundation-icons/foundation-icons.css');
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
